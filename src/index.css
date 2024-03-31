@@ -1,0 +1,878 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.custom-navbar {
+   background-color: #1b4976; /* Arka plan rengi */
+   box-shadow: 0 2px 4px rgba(100, 0, 0, 50); /* Gölge */
+ }
+
+
+.ortala {
+
+ 
+ margin-inline-start: 3%;
+  
+  }
+  .Kirmizi {
+   background-color: rgb(154, 50, 50); /* Arka plan rengi */
+   color: white; /* Yazı rengi */
+   padding: 5px 10px; /* Dolgu */
+   border-radius: 5px; /* Köşe yuvarlama */
+ }
+ 
+ .Kirmizi::before {
+   content: "⚠"; /* Ünlem işareti */
+   margin-right: 5px; /* Ünlem işareti ile metin arasındaki boşluk */
+ }.box-shadow-hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+  
+
+.white-overlay-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  border-radius: 5px;
+}
+
+.box-shadow-hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.white-overlay-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  border-radius: 5px;
+}
+.box-shadow-hover:hover {
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
+ 
+
+
+ .white-overlay-hover:hover::before {
+   opacity: 1;
+ }
+
+.exclamation-text{
+
+   margin-right: 0%;
+}
+
+
+
+
+.haberler {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.haberekle {
+  width: 270px;
+  height: 480px;
+  margin-left: 80px;
+  margin-top: 40px;
+  padding: 4px;
+  border: 2px solid black;
+  box-shadow: 0 4px 8px rgba(30, 0, 50, 20);
+}
+
+.fotografayar {
+  margin: 10px;
+  width: 240px;
+  max-height: 280px;
+}
+
+
+
+.haberlink{
+  color: gray ;
+}
+
+.haberbaslik {
+  font-family:Arial, Helvetica, sans-serif;
+  margin-left: 10px;
+  padding-top: 5px; /* px birimi ekledim */
+  font-size: 24px;
+  color: black;
+  overflow: hidden; /* İçerik kutuyu aşarsa gizle */
+  text-overflow: ellipsis; /* Uzun metni üç nokta ile kısalt */
+   /* Metni tek satırda tut */
+  max-height: 250px; /* Başlığın yüksekliğini sınırla */
+  margin-left:10px;
+padding-top: 5;
+font-size: 24px;  /* Gerekirse buraya stil tanımları ekleyebilirsiniz */
+color:black;
+
+
+
+}
+.haberparagraf{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px; /* px birimi ekledim */
+  color: rgb(11, 9, 9);
+  overflow: hidden; /* İçerik kutuyu aşarsa gizle */
+  text-overflow: ellipsis; /* Uzun metni üç nokta ile kısalt */
+   /* Metni tek satırda tut */
+  max-height: 50px; /* Paragrafın yüksekliğini sınırla */
+}
+.haberparagraf:hover{ 
+  color: #494949 !important;
+  border-radius: 50px;
+  border-color: #494949 !important;
+  transition: all 0.3s ease 0s;
+
+}
+.habertarih{
+  margin-top: 4px;
+  font-size: 14px;
+  color: rgb(15, 7, 7);
+  height: 36px; /* Paragraf için sabit yükseklik */
+  overflow: auto; /* İçerik taşarsa kaydırma çubuğu göster */
+  word-wrap: break-word; /* Uzun kelimeleri satır sonunda böl */
+}
+.haberlink:hover{
+  
+    color: #494949 !important;
+    border-radius: 50px;
+    border-color: #494949 !important;
+    transition: all 0.3s ease 0s;
+
+
+}
+@media (max-width: 374px) {
+  .haberekle {
+    margin-left: 20px; /* Ekran boyutu 320px altında margin-left 10px olacak */
+  }
+}
+
+.haberfotograf{
+width: 520px;
+height: 380px;
+margin-top: 3%;
+margin-left: 10%;
+}
+
+@media (min-width: 2560px) {
+  .haberfotograf {
+    width: 1040px;
+    height: 760px;
+    margin-left: 10%;
+  } 
+ 
+}
+
+.haberfotograf:hover {
+  transform: scale(1.05); /* Resmi %5 oranında büyütür */
+  transition: transform 0.3s ease; /* Geçiş efektini yumuşatır */
+}
+
+.haberyazisi{
+font-family: 'Times New Roman', Times, serif;
+  font-size: 18px ;
+  font-display: flex;
+  margin-left: 9%; /* İçerik kutuyu aşarsa gizle */
+margin-bottom: 8%;
+margin-top: 8%;
+color: rgb(16, 29, 37);
+}
+
+@media (min-width: 1920px) {
+  .haberyazisi {
+    font-size:24px;
+  } 
+ 
+}
+@media (min-width: 2560px) {
+  .haberyazisi {
+    font-size:32px;
+  } 
+  
+}
+
+
+.haberbasligi{
+  
+  margin-top: 3%;
+  overflow: hidden  ; /* İçerik kutuyu aşarsa gizle */
+  text-overflow: ellipsis; /* Uzun metni üç nokta ile kısalt */
+
+  font-family: 'Times New Roman', Times, serif ;
+  font-size: 22px;
+  color: black;
+  margin-bottom: 4%;
+}
+
+.haberyazisi:hover{
+ 
+  
+  
+ 
+  font-size: 19px;
+  transition: all 0.5s ease;
+}
+
+
+.haberbasligi:hover{
+  margin-top: 1%;
+  transform: scale(1.02);
+  color: rgb(0, 0, 0);
+  transition: all 0.5s ease;
+}
+
+.yazarfotograf{
+  font-family: 'Times New Roman', Times, serif;
+  width: 120px;
+  height: 150px;
+  border-radius: 60%;
+}
+
+.yazaradi{
+  margin-left: 15%;
+ 
+}
+.yaziduzenleme{
+  margin-top: 2%;
+  display: flex;
+  margin-left: 45%;
+  
+}
+@media (max-width: 450px) {
+  .yaziduzenleme {
+    margin-left: 28%;
+  }
+}
+
+
+
+.guncellemebuton{
+  width: 150px;
+  margin-left: 5%;
+}
+.yazimenu .kategorisec{
+  display: flex;
+  flex-direction: column;
+  padding-left: 1%;
+
+  padding-inline-end: 55%;
+}
+.girisformu{
+margin: 3%; 
+margin-left: 4%;
+ 
+}
+
+.girisbaslik{
+
+  margin-left: 2%;
+
+
+}
+.kullaniciadigiris{
+  margin-right: 5%;
+}
+.girisbutonu{
+  margin-left: 5%;
+  margin-bottom: 0.5%;
+  width: 150px;
+}
+
+
+.cikisyap:hover{
+  background-size: 30px;
+  background-color: rgb(165, 212, 199);
+  border-radius: 10%;
+  transition: all 0.3s ease-in-out;
+}
+.cikisyap:hover::after {
+  
+  content: "❗";
+  transition: all 0.3s ease-in-out;
+}
+.haberbasligir{
+  margin-left: 2%;
+  margin-bottom: 4%;
+  width: 650px;
+  height: 40px;
+  outline-color:rgb(37, 53, 67);
+  padding-inline: 0px;
+  
+  
+}
+.haberbasligiyayinla{
+  margin-left: 4%;
+}
+.yayinlanacak{ 
+  margin-left:4%;
+}
+@media (max-width: 393px) {
+  .yayinlanacak {
+    margin-left: 15%;
+    margin-bottom: 45px; /* Ekran boyutu 320px altında margin-left 10px olacak */
+  }
+}
+
+.yazarkayitbuton{ 
+  width: 150px;
+margin-left: 4%;
+
+
+}
+@media (max-width: 393px) {
+  .yazarkayitbuton {
+
+    margin-left: 25%;
+    margin-bottom: 45px; /* Ekran boyutu 320px altında margin-left 10px olacak */
+  }
+}
+/* Radyo butonları ve etiketleri için genel stil */
+/* Radyo butonları ve etiketleri için genel stil */
+/* Radyo butonları ve etiketleri için genel stil */
+.radyobutonlar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10%;
+}
+
+.radyobutonlar label {
+  margin-right: 50px;
+  
+  /* Etiket ile radyo butonu arasında boşluk bırakır */
+}
+
+/* Ekran genişliği 600px veya daha az olduğunda uygulanacak stil */
+@media (max-width: 600px) {
+  .radyobutonlar {
+    flex-direction: column;
+    align-items: flex-start; /* İçeriği sola hizalar */
+  }
+
+  .radyobutonlar label {
+    order: 1; /* Etiketleri radyo butonlarının üstüne alır */
+    margin-bottom: 5px; /* Altındaki radyo butonundan boşluk bırakır */
+  }
+
+  .radyobutonlar input[type="radio"] {
+    order: 1; /* Radyo butonlarını etiketlerin altına alır */
+    margin-left: auto; /* Radyo butonunu sağa yaslar */
+  
+    /* Altındaki etiketten boşluk bırakır */
+  }
+}
+
+@media (max-width: 600px) {
+  .radyobutonlar label{
+   margin-top: -20px;
+   /* İçeriği sola hizalar */
+  }
+}
+.react-player  {
+  /* Büyük ekranlar için genişlik ve yükseklik */
+  width: 680px !important;
+  height: 300px;
+  margin-top: 3%;
+ margin-left: 30%;
+}
+
+.react-player iframe {
+  /* Büyük ekranlar için genişlik ve yükseklik */
+  width: 600px !important;
+  height: 300px;
+  margin-top: 5%;
+ 
+}
+
+
+
+
+
+
+@media (max-width: 400px) {
+  .react-player  {
+    /* Küçük ekranlarda genişlik ve yükseklik sabit değerlere ayarlanır */
+    width: 320px !important;
+    height: 300px !important;
+    margin-left: 5% !important;
+  }
+}
+
+
+
+
+/* Ekran genişliği 500px'den küçük olduğunda */
+
+
+@media (max-width: 360px) {
+  .react-player iframe {
+    /* Küçük ekranlarda genişlik ve yükseklik sabit değerlere ayarlanır */
+    width: 250px !important;
+    height: 230px !important;
+    margin-left: 5% !important;
+  }
+}
+@media (min-width: 360px) and (max-width: 400px) {
+  .react-player {
+    /* Burada istediğiniz stil tanımlarını yapın */
+    width: 360px !important;
+    height: 300px !important;
+    margin-left: 5% !important;
+  }
+  .react-player iframe {
+    width: 320px !important;
+    height: 280px !important;
+    margin-left: 2% !important;
+  }
+}
+
+
+@media (min-width: 401px) and (max-width: 500px) {
+  .react-player {
+    /* Burada istediğiniz stil tanımlarını yapın */
+    width: 420px !important;
+    height: 300px !important;
+    margin-left: 2% !important;
+  }
+  .react-player iframe {
+    width: 390px !important;
+    height: 290px !important;
+    margin-left: 2% !important;
+  }
+}
+
+/* Ekran genişliği 500px ile 700px arasında olduğunda */
+@media (min-width: 500px) and (max-width: 750px) {
+  .react-player {
+    /* Burada istediğiniz stil tanımlarını yapın */
+    width: 540px !important;
+    height: 300px !important;
+    margin-left: 5% !important;
+  }
+  .react-player iframe {
+    /* Burada istediğiniz stil tanımlarını yapın */
+    width: 490px !important;
+    height: 300px !important;
+    margin-left: 5% !important;
+  }
+}
+
+/* Ekran genişliği 700px ile 900px arasında olduğunda */
+@media (min-width: 750px) and (max-width: 900px) {
+  .react-player {
+    /* Burada istediğiniz stil tanımlarını yapın */
+    width: 600px !important;
+    height: 300px !important;
+    margin-left: 8% !important;
+  }
+  .react-player iframe {
+    /* Burada istediğiniz stil tanımlarını yapın */
+    width: 600px !important;
+    height: 300px !important;
+    margin-left: 8% !important;
+  }
+}
+@media (min-width: 900px) and (max-width: 1150px) {
+  .react-player {
+    /* Burada istediğiniz stil tanımlarını yapın */
+    width: 600px !important;
+    height: 300px !important;
+    margin-left: 12% !important;
+  }
+  .react-player iframe {
+    /* Burada istediğiniz stil tanımlarını yapın */
+    width: 600px !important;
+    height: 300px !important;
+    margin-left: 12% !important;
+  }
+}
+@media (min-width: 1150px) and (max-width: 1250px) {
+  .react-player {
+    /* Burada istediğiniz stil tanımlarını yapın */
+    width: 600px !important;
+    height: 300px !important;
+    margin-left: 17% !important;
+  }
+  .react-player iframe {
+    /* Burada istediğiniz stil tanımlarını yapın */
+    width: 600px !important;
+    height: 300px !important;
+    margin-left: 17% !important;
+  }
+}
+
+@media (min-width: 1820px) and (max-width: 2160px) {
+  .react-player {
+    /* Burada istediğiniz stil tanımlarını yapın */
+    width: 1100px !important;
+    height: 600px !important;
+    margin-left: 18% !important;
+  }
+  .react-player iframe {
+    /* Burada istediğiniz stil tanımlarını yapın */
+    width: 1090px !important;
+    height: 590px !important;
+    margin-left: 12% !important;
+  }
+}
+@media (min-width: 2400px) and (max-width: 3840px) {
+  .react-player {
+    /* Burada istediğiniz stil tanımlarını yapın */
+    width: 1200px !important;
+    height: 700px !important;
+    margin-left: 22% !important;
+  }
+  .react-player iframe {
+    /* Burada istediğiniz stil tanımlarını yapın */
+    width: 1190px !important;
+    height: 690px !important;
+    margin-left: 13% !important;
+  }
+}
+@media (max-width: 600px) {
+  .haberbasligir{
+    margin-left: 2%;
+    margin-top: 5%;
+   /* İçeriği sola hizalar */
+   width: 250px;
+  }
+}
+.swiper-pagination-bullet {
+  opacity: 1 !important; /* Tüm bullet'ları görünür yap */
+  background-color: #000 !important; /* Siyah renk */
+  background: none !important;
+  border: none !important;
+}
+
+/* Aktif olan pagination bullet'ını beyaz yap */
+.swiper-pagination-bullet-active {
+  background-color: #fff !important; /* Beyaz renk */
+  color: rgb(138, 106, 106);
+  padding-right: 1%;
+}
+
+/* Swiper container'ının overflow özelliğini ayarla */
+.mySwiper {
+  overflow: visible; /* Pagination'ın görünür olmasını sağla */
+}
+
+/* Swiper pagination'ı kartların altına al */
+.mySwiper .swiper-pagination {
+  position: absolute;
+  top: 0px !important; /* Kartların altına yerleştir */
+  left: 0;
+  width: 100% !important;
+  text-align: center;
+  font-size: 20px;
+}
+
+.whatsappbuton{
+  margin-left: 1%;
+
+}
+.telegrampaylasbuton{
+  margin-right: 1%;
+}
+.yayinsuresi{ 
+  font-size: 12px;
+}
+
+@media (min-width: 2560px) {
+  .yayinsuresi {
+    font-size:24px;
+  } 
+  
+}
+.slider-container {
+  width: 250px; /* Konteyner genişliğini ayarla */
+  height: 300px; /* Konteyner yüksekliğini ayarla */
+  margin: auto; /* Merkeze al */
+  position: relative; /* Pozisyon ayarları için */
+}
+
+.slider-container img {
+  width: 100%; /* Resimleri konteyner genişliğine sığdır */
+  height: auto; /* Yüksekliği orantılı ayarla */
+  max-height: 250px; /* Maksimum yüksekliği sınırla */
+}
+
+/* Kaydırma butonlarını göster */
+.slick-prev, .slick-next {
+  display: block !important; /* Butonları zorla göster */
+  position: absolute; /* Pozisyonunu ayarla */
+  top: 50%; /* Yatayda ortala */
+  transform: translateY(-50%); /* Düzeltilmiş orta nokta */
+  z-index: 1; /* Üst katmanda göster */
+  background-color: #4a2a73 !important; /* Buton arka plan rengi */
+  border-radius: 20%;
+}
+
+.slick-prev {
+  left: -25px; /* Sol butonu sola kaydır */
+}
+
+.slick-next {
+  right: -25px; /* Sağ butonu sağa kaydır */
+}
+
+/* 320px'den küçük cihazlar için stil */
+@media (max-width: 320px) {
+  .slider-container {
+    width: 250px; /* Konteyner genişliğini ayarla */
+    height: 200px; /* Konteyner yüksekliğini ayarla */
+  }
+
+  .slider-container img {
+    max-height: 300px; /* Maksimum yüksekliği sınırla */
+  }
+
+  .slick-prev {
+    left: -20px; /* Sol butonu sola kaydır */
+  }
+
+  .slick-next {
+    right: -20px; /* Sağ butonu sağa kaydır */
+  }
+}
+
+/* Tablet ve daha büyük cihazlar için stil */
+@media (min-width: 600px) {
+  .slider-container {
+    width: 550px; /* Konteyner genişliğini ayarla */
+    height: 450px; /* Konteyner yüksekliğini ayarla */
+  }
+
+  .slider-container img {
+    max-height: 450px; /* Maksimum yüksekliği sınırla */
+  }
+}
+
+
+/* Daha büyük masaüstü ekranlar için stil */
+@media (min-width: 768px) {
+  .slider-container {
+    width: 550px; /* Konteyner genişliğini ayarla */
+    height: 450px; /* Konteyner yüksekliğini ayarla */
+  }
+
+  .slider-container img {
+    max-height: 450px; /* Maksimum yüksekliği sınırla */
+  }
+}
+
+.iframe-container {
+  margin-top: -3%;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* İframe yüksekliği */
+}
+
+iframe {
+  width: 1000px;
+  height: 100%; /* İframe'i kapsayıcıya göre yükseklik */
+}
+
+/* 1000px'den düşük çözünürlüklerde iframe'i gizle */
+@media screen and (max-width: 1000px) {
+  .iframe-container {
+    display: none;
+  }
+}
+
+.digerimgler{
+
+  margin-top: 40%;
+}
+
+
+.slideriki {
+  width: 580px; /* Konteyner genişliğini ayarla */
+  height: 450px; /* Konteyner yüksekliğini ayarla */
+  margin: auto; /* Merkeze al */
+  position: relative; /* Pozisyon ayarları için */
+  margin-top: 5%;
+}
+
+.slideriki img {
+  width: 100%; /* Resimleri konteyner genişliğine sığdır */
+  height: auto; /* Yüksekliği orantılı ayarla */
+  max-height: 350px; /* Maksimum yüksekliği sınırla */
+}
+.slideriki img:hover {
+  transform: scale(1.07); /* Resmi %5 oranında büyütür */
+  transition: transform 0.3s ease; /* Geçiş efektini yumuşatır */
+}
+
+/* Kaydırma butonlarını göster */
+.slideriki .slick-prev, .slideriki .slick-next {
+  display: block !important; /* Butonları zorla göster */
+  position: absolute; /* Pozisyonunu ayarla */
+  top: 45%; /* Yatayda ortala */
+  transform: translateY(-50%); /* Düzeltilmiş orta nokta */
+  z-index: 1; /* Üst katmanda göster */
+  background-color: #4a2a73 !important; /* Buton arka plan rengi */
+  border-radius: 20%;
+}
+
+.slideriki .slick-prev {
+  left: -25px; /* Sol butonu sola kaydır */
+}
+
+.slideriki .slick-next {
+  right: -25px; /* Sağ butonu sağa kaydır */
+}
+
+/* Küçük ekranlar için medya sorgusu */
+
+@media (max-width: 600px) {
+  .slideriki {
+    margin-top: 10%;
+    margin-left: 7%;
+    width: 410px; /* Konteyner genişliğini ayarla */
+    height: 380px; /* Konteyner yüksekliğini ayarla */
+  }
+
+  .slideriki img {
+   
+    width: 380px;
+    max-height: 250px; /* Maksimum yüksekliği sınırla */
+  }
+}
+
+@media (max-width: 475px) {
+  .slideriki {
+    margin-top: 10%;
+    margin-left: 12%;
+    width: 320px; /* Konteyner genişliğini ayarla */
+    height: 380px; /* Konteyner yüksekliğini ayarla */
+  }
+
+  .slideriki img {
+   
+    width: 300px;
+    max-height: 300px; /* Maksimum yüksekliği sınırla */
+  }
+}
+
+@media (max-width: 320px) {
+  .slideriki {
+    margin-top: 10%;
+    margin-left: 11%;
+    width: 260px; /* Konteyner genişliğini ayarla */
+    height: 380px; /* Konteyner yüksekliğini ayarla */
+  }
+
+  .slideriki img {
+   
+    width: 250px;
+    max-height: 200px; /* Maksimum yüksekliği sınırla */
+  }
+}
+@media (min-width: 1920px) {
+  .slideriki {
+     /* Yarısından 290px sola kaydır */
+    width: 1000px;
+    height: 680px;
+  }
+  .slideriki img {
+   
+    width: 990px;
+    max-height: 590px; /* Maksimum yüksekliği sınırla */
+  }
+  
+}
+
+.yazarlarliste {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.yazarekleyazar {
+  width: 310px;
+  height: 400px;
+  margin-left: 80px;
+  margin-top: 40px;
+  padding: 4px;
+  border: 3px solid black;
+  border-radius: 3%;
+  box-shadow: 0 4px 15px rgba(30, 0, 180, 100);
+}
+
+.yazarfotografayar {
+  margin: 10px;
+  margin-left: 45px;
+  width: 200px;
+ border-radius: 80%;
+  max-height: 170px;
+}
+
+.yazarlinkii {
+  color: gray;
+}
+
+.yazarbaslikii {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 10px;
+  padding-top: 5px;
+  font-size: 24px;
+  color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 100px;
+  width: 260px;
+}
+
+.yazarparagrafii {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  color: rgb(11, 9, 9);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 50px;
+}
+
+.yazarparagrafii:hover { 
+  color: #494949 !important;
+  border-radius: 50px;
+  border-color: #494949 !important;
+  transition: all 0.3s ease 0s;
+}
+
+
+
+.yazarlinkii:hover {
+  color: #494949 !important;
+  border-radius: 50px;
+  border-color: #494949 !important;
+  transition: all 0.3s ease 0s;
+}
+
+@media (max-width: 374px) {
+  .yazarekleyazar {
+    margin-left: 10px;
+  
+  }
+}
+.kullanicisilbutonduzenle{
+margin-left: 5%;
+
+}
