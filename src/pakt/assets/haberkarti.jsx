@@ -3,14 +3,19 @@ import { Await, Link, useLocation } from 'react-router-dom';
 
 import axios from 'axios';
 import moment from 'moment';
-import { Swiper, SwiperSlide } from 'swiper/react';
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import {Swiper,SwiperSlide,} from "swiper/react";
+
+// Import Swiper 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/free-mode';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css'; 
-import 'slick-carousel/slick/slick-theme.css';
-import { Pagination, } from 'swiper/modules';
+import 'swiper/css/navigation';
+
+import { Pagination } from 'swiper/modules';
+
 
 function Haberkarti() {
   const [haberler, setHaberler] = useState([]);
@@ -23,19 +28,30 @@ function Haberkarti() {
     fetchData(category);
     setIsCategorySelected(!!category);
   }, [location]);
-
   const fetchData = async (cat) => {
     const url = cat
       ? `https://burdahaberajansi.com/api/posts?cat=${cat}`
-      : 'https://burdahaberajansi.com/api/posts';
+      : `https://burdahaberajansi.com/api/posts/`;
     try {
-      const res = await axios.get(url);
-      res.data.sort((a, b) => new Date(b.date) - new Date(a.date));
-      setHaberler(res.data);
+      const res = await axios.get(url, {
+        headers: {
+          Accept: 'application/json', // Accept header'ını ekledik
+        },
+      });
+      if (Array.isArray(res.data)) {
+        // Verileri en yeni başta olacak şekilde sıralayın
+        const sortedData = res.data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        setHaberler(sortedData);
+      } else {
+        console.error('Error: res.data is not an array');
+        // Hata durumunu işleyin (örneğin, kullanıcıya bir mesaj gösterin)
+      }
     } catch (err) {
-      console.log(err);
+      console.error('Error fetching data:', err);
+      // Hata durumunu işleyin (örneğin, kullanıcıya bir mesaj gösterin)
     }
   };
+  
 
   const slides = [];
   for (let i = 0; i < haberler.length; i += 12) {

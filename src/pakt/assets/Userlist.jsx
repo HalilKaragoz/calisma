@@ -10,7 +10,7 @@ const UserList = () => {
     useEffect(() => {
         const userIdCookie = document.cookie
           .split('; ')
-          .find(cookie => cookie.startsWith('userId='))
+          .find(cookie => cookie.startsWith('access_token'))
           ?.split('=')[1]; // Çerez değerini almak için split('=')[1] ekledim.
           console.log(userIdCookie)
         

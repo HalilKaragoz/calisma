@@ -15,7 +15,7 @@ function App() {
     // Kullanıcının oturum durumunu kontrol et
     const sessionIdCookie = document.cookie
       .split(';')
-      .find(cookie => cookie.trim().startsWith('sessionId='));
+      .find(cookie => cookie.startsWith('access_token'));
     setIsLoggedIn(!!sessionIdCookie);
    
     
@@ -104,15 +104,15 @@ function Header({ isLoggedIn, setIsLoggedIn }) {
       <br />
       <Nav variant="tabs" defaultActiveKey="/home" className='ikiheadarkaplan justify-content-center navbar-expand sticky-top' style={{  gap: '0px', fontSize: '14', flexWrap: 'nowrap', backgroundColor: 'white' }}>
         <Nav.Item>
-          <Nav.Link href="/home">
+          <Nav.Link href="/?cat=sondakika">
             <span role="img" aria-label="Exclamation">❗</span> SON DAKİKA
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-1">GÜNCEL HABER</Nav.Link>
+          <Nav.Link eventKey="/?cat=guncelhaber">GÜNCEL HABER</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="/home" >YEREL HABER</Nav.Link>
+          <Nav.Link href="/?cat=yerelhaber" >YEREL HABER</Nav.Link>
         </Nav.Item>
       </Nav>
       <br />
